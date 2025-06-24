@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevPlugNG Admin Panel</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: white; padding: 2em; text-align: center; }
+    #dashboard { display: none; }
+    textarea { width: 90%; height: 100px; margin-top: 10px; }
+    input[type="password"] { padding: 0.5em; font-size: 1em; }
+    button { padding: 0.5em 1em; margin-top: 10px; }
+    .section { margin-top: 2em; padding: 1em; background: #222; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔐 DevPlugNG Admin Panel</h1>
+  <p>Enter Password to Access:</p>
+  <input type="password" id="passwordInput" placeholder="Enter password" />
+  <button onclick="checkPassword()">Login</button>
+
+  <div id="dashboard">
+    <div class="section">
+      <h2>📥 Orders</h2>
+      <textarea placeholder="Paste order details here..."></textarea>
+    </div>
+    <div class="section">
+      <h2>📝 Notes</h2>
+      <textarea placeholder="Any extra notes or to-dos..."></textarea>
+    </div>
+    <div class="section">
+      <h2>🛠 Services</h2>
+      <textarea placeholder="List your services here..."></textarea>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      if (input === 'plug123') {
+        document.getElementById('dashboard').style.display = 'block';
+      } else {
+        alert('Wrong password!');
+      }
+    }
+  </script>
+</body>
+</html>
