@@ -1,81 +1,189 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevPlugNG - Your Digital Growth Plug</title>
+  <title>DevPlugNG - Home + Store + Admin</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f4f4f4; color: #222; }
-    header { background: #000; color: #fff; padding: 1em 2em; display: flex; justify-content: space-between; align-items: center; position: relative; }
-    .logo { font-size: 1.5em; font-weight: 700; color: gold; }
-    nav a { margin: 0 1em; color: #fff; text-decoration: none; font-weight: 500; }
-    .owner-tag { position: absolute; top: 5px; right: 10px; font-size: 0.75em; color: #ccc; font-style: italic; }.hero { background: linear-gradient(to right, #000, #1a1a1a); color: white; padding: 3em 2em; text-align: center; }
-.hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-.hero p { font-size: 1.2em; margin-bottom: 1em; }
-.hero a { background: gold; color: black; padding: 0.8em 1.5em; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin: 0.5em; }
-
-.services, .pricing, .why { padding: 2em; text-align: center; }
-.services h2, .pricing h2, .why h2 { margin-bottom: 1em; color: #111; }
-
-.cards { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
-.card { background: white; border-radius: 10px; padding: 1.5em; width: 250px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.card h3 { margin-bottom: 0.5em; color: #000; }
-.card p { color: #444; }
-.card a { display: inline-block; margin-top: 0.5em; padding: 0.5em 1em; background: #25D366; color: white; border-radius: 5px; text-decoration: none; font-weight: bold; }
-
-.whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 1em 1.2em; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-
-footer { text-align: center; padding: 1em; background: #000; color: #aaa; margin-top: 2em; }
-
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      padding: 2em;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
+      margin: 0 1em;
+      background: gold;
+      color: black;
+      padding: 0.6em 1.2em;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      margin-bottom: 3em;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .readonly {
+      background: #eee;
+    }
+    button {
+      width: 100%;
+      background: black;
+      color: gold;
+      padding: 1em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      text-align: center;
+      margin-top: 1em;
+      font-size: 0.9em;
+    }
+    .admin-section {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .admin-section table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .admin-section th, .admin-section td {
+      padding: 0.8em;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3em;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">DevPlugNG</div>
-    <div class="owner-tag">by Adeoye InGod</div>
-    <nav>
-      <a href="store.html" class="btn">Visit Store</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>  <section class="hero">
-    <h1>Your Naija Plug for Digital Boosting</h1>
-    <p>Social Media Growth, Gaming Boosts, Verified Numbers – Fast & Trusted</p>
-    <a href="https://wa.me/2349128013665" target="_blank">Order on WhatsApp</a>
-    <a href="https://gthubiosp.github.io/DevPlugNG/DevPlugNG_App.apk" target="_blank">📱 Download Our App (.apk)</a>
-  </section>  <section class="services" id="services">
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>TikTok Boost</h3>
-        <p>Views, Likes & Followers that land you on FYP 🔥</p>
-        <a href="https://wa.me/2349128013665?text=Hello%20DevPlugNG!%0AI'd%20like%20to%20order:%0A📱%20TikTok%20Views%20–%202k%0A👤%20My%20Username:%20____%0A💵%20Payment:%20₦1,000" target="_blank">Buy 2k Views</a>
-      </div>
-      <div class="card">
-        <h3>Instagram Growth</h3>
-        <p>Real followers, likes & comments to grow your brand.</p>
-        <a href="https://wa.me/2349128013665?text=Hello%20DevPlugNG!%0AI'd%20like%20to%20order:%0A📱%20Instagram%20Followers%20–%201k%0A👤%20My%20Username:%20____%0A💵%20Payment:%20₦2,500" target="_blank">Buy 1k Followers</a>
-      </div>
-      <div class="card">
-        <h3>Gaming Services</h3>
-        <p>Free Fire, CoDM accounts and top-ups available 24/7.</p>
-        <a href="https://wa.me/2349128013665?text=Hello%20DevPlugNG!%0AI'd%20like%20to%20order:%0A🎮%20Free%20Fire%20Account%0A💵%20Budget:%20₦3,000%20or%20more" target="_blank">Order Free Fire</a>
-      </div>
-      <div class="card">
-        <h3>WhatsApp Numbers</h3>
-        <p>USA & NG numbers for verifications and business use.</p>
-        <a href="https://wa.me/2349128013665?text=Hello%20DevPlugNG!%0AI'd%20like%20to%20order:%0A📞%20US%20WhatsApp%20Number%0A💵%20Payment:%20₦1,200" target="_blank">Buy US Number</a>
-      </div>
-    </div>
-  </section>  <section class="why">
-    <h2>Why Choose DevPlugNG?</h2>
-    <p>✅ Fast Delivery&nbsp;&nbsp;✅ Trusted Plug&nbsp;&nbsp;✅ 24/7 Support</p>
-  </section><a href="https://wa.me/2349128013665" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+  <h1>DevPlugNG</h1>
+  <nav>
+    <a href="#store">🛍️ Store</a>
+    <a href="#admin">🔐 Admin Panel</a>
+  </nav>
 
-  <footer id="contact">
-    <p>© 2025 DevPlugNG. Powered by Adeoye InGod 🔌</p>
+  <h2 id="store">Place Your Order</h2>
+  <form id="orderForm">
+    <label for="product">Select Product</label>
+    <select id="product" name="product" required onchange="updateCharge()">
+      <option value="">-- Choose --</option>
+      <option value="TikTok Views">TikTok Views - ₦1,000 / 1000</option>
+      <option value="Instagram Followers">Instagram Followers - ₦3,469 / 1000</option>
+      <option value="WhatsApp Number">WhatsApp US Number - ₦1,200 each</option>
+      <option value="Free Fire Top-Up">Free Fire Top-Up - ₦3,000 each</option>
+    </select>
+
+    <label for="link">Link to Profile/Post</label>
+    <input type="url" id="link" name="link" placeholder="https://tiktok.com/@user" required />
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" oninput="updateCharge()" required />
+
+    <label for="time">Average Delivery Time</label>
+    <input type="text" id="time" class="readonly" readonly />
+
+    <label for="charge">Total Charge (₦)</label>
+    <input type="text" id="charge" class="readonly" readonly />
+
+    <button type="submit">Confirm Order</button>
+    <div class="note">You must be logged in to place order.</div>
+  </form>
+
+  <h2 id="admin">Admin Panel</h2>
+  <div class="admin-section">
+    <p><strong>Login:</strong> Username: <code>admin</code> | Password: <code>plug123</code></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Link</th>
+          <th>Quantity</th>
+          <th>Charge</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TikTok Views</td>
+          <td>https://tiktok.com/@user</td>
+          <td>1000</td>
+          <td>₦1,000</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DevPlugNG. Built by Adeoye InGod 🔌</p>
   </footer>
+
+  <script>
+    const pricing = {
+      'TikTok Views': { price: 1000, time: '25 minutes' },
+      'Instagram Followers': { price: 3469, time: '25 minutes' },
+      'WhatsApp Number': { price: 1200, time: '10 minutes' },
+      'Free Fire Top-Up': { price: 3000, time: '15 minutes' }
+    };
+
+    function updateCharge() {
+      const product = document.getElementById('product').value;
+      const qty = parseInt(document.getElementById('quantity').value) || 0;
+      const time = document.getElementById('time');
+      const charge = document.getElementById('charge');
+
+      if (pricing[product]) {
+        const unitPrice = pricing[product].price;
+        const total = (product.includes('Views') || product.includes('Followers'))
+          ? Math.ceil((qty / 1000) * unitPrice)
+          : qty * unitPrice;
+
+        charge.value = `₦${total.toLocaleString()}`;
+        time.value = pricing[product].time;
+      } else {
+        charge.value = '';
+        time.value = '';
+      }
+    }
+  </script>
 </body>
 </html>
